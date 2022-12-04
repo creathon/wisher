@@ -126,6 +126,9 @@ var trigger_count = 0;
 var trigger_timeout = null;
 
 $(document).ready(function() {
+	var urlParams = new URLSearchParams(window.location.search);
+	var by = urlParams.has('by')?urlParams.get('by'):'Shubham';
+	var message = urlParams.has('message')?urlParams.get('message'):'Happy New year!!!';
 	var currentDate = new Date();
 	var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
 	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -159,6 +162,8 @@ $(document).ready(function() {
 
 	$('.tap').click(function(){
 		$('.tap').hide();
+		$('#by').text('by- '+by)
+		$('#message1').text(message)
 		celebrate();
 		$('.happy_mp3').trigger('play');
 	});
@@ -169,7 +174,7 @@ $(document).ready(function() {
 		// trigger_timeout = setTimeout(function(){
 		// 	trigger_count = 0;
 		// }, 500);
-
+		
 		celebrate();
 		$('.happy_mp3').trigger('play');
 		
