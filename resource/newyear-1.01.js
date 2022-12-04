@@ -131,40 +131,48 @@ $(document).ready(function() {
 	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 	$('.countdown_mp3').trigger('load');
+
 	$('.happy_mp3').trigger('load');
+	
 
-	clock = $clock.FlipClock(diff, {
-		clockFace: 'DailyCounter',
-		countdown: true,
-		callbacks: {
-			interval: function() {
-				var time = this.factory.getTime().time;
+	
+	// clock = $clock.FlipClock(diff, {
+	// 	clockFace: 'DailyCounter',
+	// 	countdown: true,
+	// 	callbacks: {
+	// 		interval: function() {
+	// 			var time = this.factory.getTime().time;
 
-				if(time === 10) {
-					$('.countdown_mp3').trigger('play');
-				}
+	// 			if(time === 10) {
+	// 				$('.countdown_mp3').trigger('play');
+	// 			}
 
-				if(time <= 10 && time > 0) {
-					pulse();
-				}
-				else if(time <= 0) {
-					celebrate();
-				}
-			}
-		}
+	// 			if(time <= 10 && time > 0) {
+	// 				pulse();
+	// 			}
+	// 			else if(time <= 0) {
+	// 				celebrate();
+	// 			}
+	// 		}
+	// 	}
+	// });
+
+	$('.tap').click(function(){
+		$('.tap').hide();
+		celebrate();
+		$('.happy_mp3').trigger('play');
 	});
+	$('#confetti').click(function(){
+		// trigger_count++;
 
-	$('.wrapper').click(function(){
-		trigger_count++;
+		// clearTimeout(trigger_timeout);
+		// trigger_timeout = setTimeout(function(){
+		// 	trigger_count = 0;
+		// }, 500);
 
-		clearTimeout(trigger_timeout);
-		trigger_timeout = setTimeout(function(){
-			trigger_count = 0;
-		}, 500);
-
-		if(trigger_count === 5){
-			celebrate();
-		}
+		celebrate();
+		$('.happy_mp3').trigger('play');
+		
 	});
 });
 
@@ -172,16 +180,17 @@ function celebrate()
 {
 	$confetti.fadeIn();
 	
-	$clock.removeClass('animated flipInX');
-	$clock.addClass('animated flipOutX');
+	//$clock.removeClass('animated flipInX');
+	//$clock.addClass('animated flipOutX');
 
-	clearTimeout(timeout);
+	//clearTimeout(timeout);
 	setTimeout(function(){
 		$message.addClass('animated flipInX').fadeIn();
 		timeout = setTimeout(bounce, interval);
+		//$('.happy_mp3').trigger('play');
 	}, 350);
 
-	$('.happy_mp3').trigger('play');
+	
 }
 
 function pulse()
