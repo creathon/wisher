@@ -1,0 +1,26 @@
+curl -o happy-new-year.m4a https://peter.build/newyears/audio/happy-new-year.m4a
+curl -o happy-new-year.ogg https://peter.build/newyears/audio/happy-new-year.ogg
+curl -o countdown.m4a https://peter.build/newyears/audio/countdown.m4a
+curl -o countdown.ogg https://peter.build/newyears/audio/countdown.ogg
+curl -o jquery-1.11.2.min.js https://code.jquery.com/jquery-1.11.2.min.js
+curl -o  flipclock.js https://peter.build/newyears/js/flipclock.js
+curl -o newyear-1.01.js https://peter.build/newyears/js/newyear.js?v1.01
+curl -o style.css https://peter.build/newyears/css/style.css
+curl -o flipclock.css https://peter.build/newyears/css/flipclock.css
+curl -o animate.css https://peter.build/newyears/css/animate.css
+curl -o  https://fonts.googleapis.com/css?family=Great+Vibes
+curl -o stars.png https://peter.build/newyears/img/stars.png
+curl -o twinkling.png https://peter.build/newyears/img/twinkling.png
+curl -o clouds3.png https://peter.build/newyears/img/clouds3.png
+
+<link href="https://peter.build/newyears/css/style.css" rel="stylesheet">
+<link href="https://peter.build/newyears/css/flipclock.css" rel="stylesheet">
+<link href="https://peter.build/newyears/css/animate.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+
+<html>
+<link href="resource/style.css" rel="stylesheet">
+<link href="resource/flipclock.css" rel="stylesheet">
+<link href="resourceanimate.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
